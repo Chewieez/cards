@@ -1,9 +1,31 @@
+#card-creator {
+    padding: .5em;
+}
+
+#card-content {
+    border-radius: 7px;
+    border: .5px solid grey;
+    padding: .4em;  
+}
+
 .card {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 10px;
     padding: .5em;
+    margin: .5em;
+    background-color: lightgray;
 }
 
 p {
     margin: 0 0 .3em;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: darkslategray;
+    color: white;
+    margin: .2em;
+    padding: .6em;
+
 }

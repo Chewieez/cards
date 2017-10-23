@@ -27,7 +27,7 @@ let createCard = function(event) {
     cardsEl.innerHTML += `
         <article class="card" id="article_${currentCardId}">
             <p>${cardContent.value}</p>
-            <button id="button_${currentCardId}">Delete Me</button>
+            <button id="button_${currentCardId}">Delete</button>
         </article>
         `
     // clear the contents of the textarea after the "Create" button has been clicked and the new card has been created    
@@ -36,6 +36,7 @@ let createCard = function(event) {
 
 // create event listener to listen for the click of the "Create" button and run function to create a new card
 createCardBtnEl.addEventListener("click", createCard)
+
 
 // get control of DOM parent element that user will click to delete a card
 const cardsEl = document.getElementById("cards")
@@ -46,8 +47,6 @@ let deleteCard = function(event) {
     console.log("deleteCard event: ", event);
     // console.log("btnId: ", event.target.id.split("_")[1]);
 
-    // is this needed?
-    const cardsEl = document.getElementById("cards");
     // get the ID of the event that was clicked on
     const btnId = event.target.id
     // parse out the number in the ID of the event that was clicked
@@ -55,7 +54,7 @@ let deleteCard = function(event) {
 
     // check if the ID of event that was clicked starts with "button_". If so, then remove that card
     if (btnId.startsWith("button_")) {
-        // first console log a message to see if the if statement is working
+        // first console log a message to see if the "if statement" is working
         // console.log("yes it starts with button_")
         // assign the id of the card to be deleted to a variable by using document.getElementById
         // and the "article_" + the button Id number that was stored in a variable earlier. (btnIdNum) 
